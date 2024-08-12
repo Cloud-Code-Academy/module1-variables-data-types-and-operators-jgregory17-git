@@ -32,10 +32,7 @@ public with sharing class VariablesDataTypesOperators {
      * @return The sum of the two numbers, or null if either number is null.
      */
     public static Integer addition(Integer a, Integer b) {  
-        if(a == null){
-            return null;
-        }
-        if(b == null){
+        if(a == null || b == null){
             return null;
         }
 
@@ -167,7 +164,7 @@ public with sharing class VariablesDataTypesOperators {
      * @return True if the date is in the past, False otherwise.
      */
     public static Boolean isDateInPast(Date dt) {
-        Date today = date.today();
+        Date today = Date.today();
             if(dt < today){
                 return true;
             }
@@ -227,7 +224,7 @@ public with sharing class VariablesDataTypesOperators {
      */
     public static Double averageOfThreeNumbers(Integer a, Integer b, Integer c) {
         Integer sumOfNumbers = a + b + c;
-        Double average = sumOfNumbers / 3;
+        Double average = sumOfNumbers / 3.0;
 
         return average; 
     }
