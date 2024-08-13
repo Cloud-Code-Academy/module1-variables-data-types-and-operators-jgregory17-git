@@ -184,7 +184,7 @@ public with sharing class VariablesDataTypesOperators {
      * @return True if the date is today or in the future, False otherwise.
      */
     public static Boolean isDateTodayOrFuture(Date dt) {
-        Date today = date.today();
+        Date today = Date.today();
             if(dt > today){
                 return true;
             }
@@ -223,8 +223,8 @@ public with sharing class VariablesDataTypesOperators {
      * @return The average of the three numbers.
      */
     public static Double averageOfThreeNumbers(Integer a, Integer b, Integer c) {
-        Integer sumOfNumbers = a + b + c;
-        Double average = sumOfNumbers / 3.0;
+        Double sumOfNumbers = a + b + c;
+        Double average = sumOfNumbers / 3;
 
         return average; 
     }
